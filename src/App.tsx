@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, FunctionComponent } from "react";
 import { render } from "react-dom";
 import Pet from "./Pet";
 import { Router, Link } from "@reach/router";
@@ -6,7 +6,7 @@ import SearchParams from "./SearchParams";
 import Details from "./Details";
 import ThemeContext from "./ThemeContext";
 
-const App = () => {
+const App: FunctionComponent = () => {
   const themeHook = useState("darkblue");
   return (
     <ThemeContext.Provider value={themeHook}>
